@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Таблица движения товара на странице заявки
 // @namespace    https://github.com/timon174174174174-source/lifemart-tamper
-// @version      1.1.0
+// @version      1.2.0
 // @description  Показывает историю движения товара и время последней продажи
 // @author       You
 // @homepageURL  https://github.com/timon174174174174-source/lifemart-tamper
@@ -19,7 +19,7 @@
 (function () {
     'use strict';
 
-    const API_URL = 'https://dev-6.targethunter.dev/su/get_product_history';
+    const API_URL = 'https://185-121-235-17.sslip.io:8443/su/get_product_history';
     const CELL_STYLE = {
         border: '1px solid #dddddd',
         padding: '5px',

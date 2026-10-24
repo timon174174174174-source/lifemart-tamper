@@ -10,7 +10,7 @@ const source = fs.readFileSync(scriptPath, 'utf8');
 const rawUrl = 'https://raw.githubusercontent.com/timon174174174174-source/lifemart-tamper/main/supply-request-product-history.user.js';
 
 for (const fragment of [
-    '// @version      1.1.0',
+    '// @version      1.2.0',
     `// @updateURL    ${rawUrl}`,
     `// @downloadURL  ${rawUrl}`,
 ]) {
@@ -24,7 +24,7 @@ assert.ok(!source.includes('Онигири%20с%20куриным'), 'Тесто�
 const { buildHistoryUrl, formatMovement } = require(scriptPath);
 
 const historyUrl = new URL(buildHistoryUrl('Рап & ролл + сыр', 'Миниформат / ЕКБ #1'));
-assert.strictEqual(historyUrl.origin + historyUrl.pathname, 'https://dev-6.targethunter.dev/su/get_product_history');
+assert.strictEqual(historyUrl.origin + historyUrl.pathname, 'https://185-121-235-17.sslip.io:8443/su/get_product_history');
 assert.strictEqual(historyUrl.searchParams.get('name'), 'Рап & ролл + сыр');
 assert.strictEqual(historyUrl.searchParams.get('department'), 'Миниформат / ЕКБ #1');
 
